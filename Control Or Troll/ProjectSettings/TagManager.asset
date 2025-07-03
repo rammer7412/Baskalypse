@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - down
-  - up
+  - Ball
   layers:
   - Default
   - TransparentFX
