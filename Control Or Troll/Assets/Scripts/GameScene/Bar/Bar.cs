@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Gate : MonoBehaviour
+public class Bar : MonoBehaviour
 {
     public int openSpeed;
     public int openRange;

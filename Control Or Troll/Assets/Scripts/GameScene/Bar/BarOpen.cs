@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class GateOpen : MonoBehaviour
 {
-    public GameObject[] blueGates;
-    public GameObject[] redGates;
+    public GameObject[] blueBars;
+    public GameObject[] redBars;
 
     public Button blueButton;
     public Button redButton;
@@ -20,22 +20,22 @@ public class GateOpen : MonoBehaviour
 
         if (blueIsMoved)
         {
-            foreach (var gate in blueGates)
+            foreach (var bar in blueBars)
             {
-                Gate g = gate.GetComponent<Gate>();
-                if (g.isUpdown) gate.transform.DOMoveY(gate.transform.position.y - g.openRange, g.openSpeed);
-                else gate.transform.DOMoveX(gate.transform.position.x - g.openRange, g.openSpeed);
+                Bar g = bar.GetComponent<Bar>();
+                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y - g.openRange, g.openSpeed);
+                else bar.transform.DOMoveX(bar.transform.position.x - g.openRange, g.openSpeed);
             }
             blueIsMoved = !blueIsMoved;
             StartCoroutine("DisableBlueButton");
         }
         else
         {
-            foreach (var gate in blueGates)
+            foreach (var  bar in blueBars)
             {
-                Gate g = gate.GetComponent<Gate>();
-                if (g.isUpdown) gate.transform.DOMoveY(gate.transform.position.y + g.openRange, g.openSpeed);
-                else gate.transform.DOMoveX(gate.transform.position.x + g.openRange, g.openSpeed);
+                Bar g = bar.GetComponent<Bar>();
+                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y + g.openRange, g.openSpeed);
+                else bar.transform.DOMoveX(bar.transform.position.x + g.openRange, g.openSpeed);
 
             }
             blueIsMoved = !blueIsMoved;
@@ -49,11 +49,11 @@ public class GateOpen : MonoBehaviour
 
         if (redIsMoved)
         {
-            foreach (var gate in redGates)
+            foreach (var bar in redBars)
             {
-                Gate g = gate.GetComponent<Gate>();
-                if (g.isUpdown) gate.transform.DOMoveY(gate.transform.position.y - g.openRange, g.openSpeed);
-                else gate.transform.DOMoveX(gate.transform.position.x - g.openRange, g.openSpeed);
+                Bar g = bar.GetComponent<Bar>();
+                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y - g.openRange, g.openSpeed);
+                else bar.transform.DOMoveX(bar.transform.position.x - g.openRange, g.openSpeed);
 
             }
             redIsMoved = !redIsMoved;
@@ -61,11 +61,11 @@ public class GateOpen : MonoBehaviour
         }
         else
         {
-            foreach (var gate in redGates)
+            foreach (var bar in redBars)
             {
-                Gate g = gate.GetComponent<Gate>();
-                if (g.isUpdown) gate.transform.DOMoveY(gate.transform.position.y + g.openRange, g.openSpeed);
-                else gate.transform.DOMoveX(gate.transform.position.x + g.openRange, g.openSpeed);
+                Bar g = bar.GetComponent<Bar>();
+                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y + g.openRange, g.openSpeed);
+                else bar.transform.DOMoveX(bar.transform.position.x + g.openRange, g.openSpeed);
 
             }
             redIsMoved = !redIsMoved;
