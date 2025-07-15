@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 9435f6b6e9984f5438e54e5ba8f7d536
+guid: 1821d5d41235a7a41a6d35e8a387ec2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8768041848901560463
-    second: Basket_0
+      213: 2898735674618570014
+    second: basketBack_0
   - first:
-      213: 2867245494391069531
-    second: Basket_1
+      213: -511163369176843009
+    second: basketBack_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basket_0
+      name: basketBack_0
       rect:
         serializedVersion: 2
         x: 83
@@ -144,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8869834b975ea970800000000000000
-      internalID: 8768041848901560463
+      spriteID: e156467ecb06a3820800000000000000
+      internalID: 2898735674618570014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basket_1
+      name: basketBack_1
       rect:
         serializedVersion: 2
         x: 111
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5bd409f5908ac720800000000000000
-      internalID: 2867245494391069531
+      spriteID: ffcb50ebf9bf7e8f0800000000000000
+      internalID: -511163369176843009
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Basket_0: 8768041848901560463
-      Basket_1: 2867245494391069531
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
