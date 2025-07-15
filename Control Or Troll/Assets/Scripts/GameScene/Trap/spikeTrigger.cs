@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SpikeTrigger : MonoBehaviour
 {
     public GameObject failurePanel;
@@ -10,11 +10,7 @@ public class SpikeTrigger : MonoBehaviour
         {
             Debug.Log("공이 가시에 닿음!");
             
-            if (failurePanel != null)
-            {
-                failurePanel.SetActive(true);
-            }
-            other.gameObject.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
