@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>
 {
 
-    protected UIManager() {}
+    protected UIManager() { }
 
 
     [Header("Color Buttons")]
@@ -12,4 +12,5 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public Button blueButton;
     [SerializeField] public Button greenButton;
     [SerializeField] public Button purpleButton;
+
 }

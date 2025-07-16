@@ -1,60 +1,62 @@
 using UnityEngine;
 
-// Singleton Templete class
-// e.g. public class MyClassName : Singleton<MyClassName> {}
-// protected MyClassname() {} 을 선언해서 비 싱글톤 생성자 사용을 방지할 것
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    // Destroy 여부 확인용
-    private static bool _ShuttingDown = false;
-    private static object _Lock = new object();
-    private static T _Instance;
+    private static T _instance;
+    private static readonly object _lock = new object();
 
     public static T Instance
     {
         get
         {
-            // 게임 종료 시 Object 보다 싱글톤의 OnDestroy 가 먼저 실행 될 수도 있다. 
-            // 해당 싱글톤을 gameObject.Ondestory() 에서는 사용하지 않거나 사용한다면 null 체크를 해주자
-            if (_ShuttingDown)
+            // 어플리케이션이 종료될 때 instance를 호출하면 null을 반환하도록 방지
+            // (이 코드는 필수는 아니지만 안정성을 위해 추가)
+            if (applicationIsQuitting)
             {
-                Debug.Log("[Singleton] Instance '" + typeof(T) + "' already destroyed. Returning null.");
+                Debug.LogWarning($"[Singleton] Instance '{typeof(T)}' already destroyed on application quit. Won't create again - returning null.");
                 return null;
             }
 
-            lock (_Lock)    //Thread Safe
+            lock (_lock)
             {
-                if (_Instance == null)
+                // 인스턴스가 없다면 씬에서 찾아본다.
+                if (_instance == null)
                 {
-                    // 인스턴스 존재 여부 확인
-                    _Instance = FindFirstObjectByType<T>();
+                    _instance = FindFirstObjectByType<T>();
 
-                    // 아직 생성되지 않았다면 인스턴스 생성
-                    if (_Instance == null)
+                    // 씬에도 없다면 경고 메시지 출력 (자동으로 생성하지 않음)
+                    if (_instance == null)
                     {
-                        // 새로운 게임오브젝트를 만들어서 싱글톤 Attach
-                        var singletonObject = new GameObject();
-                        _Instance = singletonObject.AddComponent<T>();
-                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
-
-                        // Make instance persistent.
-                        DontDestroyOnLoad(singletonObject);
+                        Debug.LogError($"[Singleton] An instance of {typeof(T)} is needed in the scene, but there is none.");
                     }
                 }
-                return _Instance;
+                return _instance;
             }
         }
     }
 
-    private void OnApplicationQuit()
+    // 중복 생성을 방지하고, DontDestroyOnLoad를 처리하는 Awake
+    protected virtual void Awake()
     {
-        _ShuttingDown = true;
+        if (_instance == null)
+        {
+            // 이 인스턴스를 싱글톤으로 설정
+            _instance = this as T;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else if (_instance != this)
+        {
+            // 이미 인스턴스가 존재하면, 이 오브젝트는 파괴
+            Debug.Log($"[Singleton] Duplicate instance of {typeof(T).Name} found. Destroying the new one.");
+            Destroy(gameObject);
+        }
     }
 
-    private void OnDestroy()
+    private static bool applicationIsQuitting = false;
+
+    // 어플리케이션 종료 시 플래그 설정
+    protected virtual void OnApplicationQuit()
     {
-        _ShuttingDown = true;
+        applicationIsQuitting = true;
     }
 }
-
-
