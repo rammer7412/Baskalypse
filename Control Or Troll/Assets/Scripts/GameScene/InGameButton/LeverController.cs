@@ -38,6 +38,8 @@ public class LeverController : MonoBehaviour
                 BlueButton.SetActive(false);
                 GreenButton.SetActive(true);
                 PurpleButton.SetActive(true);
+
+                isMoved = !isMoved;
             }
         }
         else
@@ -52,6 +54,8 @@ public class LeverController : MonoBehaviour
                 BlueButton.SetActive(true);
                 GreenButton.SetActive(false);
                 PurpleButton.SetActive(false);
+
+                isMoved = !isMoved;
             }
         }
 
