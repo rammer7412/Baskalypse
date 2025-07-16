@@ -13,6 +13,8 @@ public class LeverController : MonoBehaviour
     GameObject GreenButton;
     GameObject PurpleButton;
 
+    bool isMoved = false;
+
     void Awake()
     {
         RedButton = UIManager.Instance.redButton.gameObject;
@@ -24,16 +26,33 @@ public class LeverController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ball")
+        if (!isMoved)
         {
-            leverBar.transform.DORotate(new Vector3(0f, 0f, -60f), 1f);
-            RedBlue.SetActive(false);
-            GreenPurple.SetActive(true);
+            if (other.tag == "Ball")
+            {
+                leverBar.transform.DORotate(new Vector3(0f, 0f, -60f), 1f);
+                RedBlue.SetActive(false);
+                GreenPurple.SetActive(true);
 
-            RedButton.SetActive(false);
-            BlueButton.SetActive(false);
-            GreenButton.SetActive(true);
-            PurpleButton.SetActive(true);
+                RedButton.SetActive(false);
+                BlueButton.SetActive(false);
+                GreenButton.SetActive(true);
+                PurpleButton.SetActive(true);
+            }
+        }
+        else
+        {
+            if (other.tag == "Ball")
+            {
+                leverBar.transform.DORotate(new Vector3(0f, 0f, 100f), 1f);
+                RedBlue.SetActive(true);
+                GreenPurple.SetActive(false);
+
+                RedButton.SetActive(true);
+                BlueButton.SetActive(true);
+                GreenButton.SetActive(false);
+                PurpleButton.SetActive(false);
+            }
         }
 
     }
