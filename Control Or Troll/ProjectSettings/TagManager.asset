@@ -43,14 +43,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Trigger
+    uniqueID: 2810737813
+    locked: 0
   - name: BasketBack
     uniqueID: 35672053
     locked: 0
   - name: Ball
     uniqueID: 821991265
-    locked: 0
-  - name: Trigger
-    uniqueID: 2810737813
     locked: 0
   - name: BasketFront
     uniqueID: 3424448155

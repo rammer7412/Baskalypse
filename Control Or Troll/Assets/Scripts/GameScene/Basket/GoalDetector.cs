@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GoalDetector : MonoBehaviour
+public class BasketGoal : MonoBehaviour
 {
     private Coroutine successCoroutine;
     void OnTriggerEnter2D(Collider2D other)
