@@ -6,6 +6,7 @@
 [Bb]uilds/
 [Ll]ogs/
 MemoryCaptures/
+Library/UserSettings/
 
 # OS or IDE generated
 .DS_Store
@@ -26,3 +27,4 @@ sysinfo.txt
 ExportedObj/
 *.apk
 *.unitypackage
+Control Or Troll/UserSettings/Layouts/default-6000.dwlt
