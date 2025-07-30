@@ -11,10 +11,10 @@ public class GateOpen : MonoBehaviour
     public GameObject[] greenBars;
     public GameObject[] purpleBars;
 
-    Button RedButton;
-    Button BlueButton;
-    Button GreenButton;
-    Button PurpleButton;
+    private Button RedButton;
+    private Button BlueButton;
+    private Button GreenButton;
+    private Button PurpleButton;
 
     void Awake()
     {
