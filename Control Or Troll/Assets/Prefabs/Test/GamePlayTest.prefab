@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4834577208530427825}
   - component: {fileID: 223144301841731798}
   m_Layer: 5
-  m_Name: Green
+  m_Name: GreenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5686998956008047564}
         m_TargetAssemblyTypeName: GateOpen, Assembly-CSharp
         m_MethodName: GreenOpen
         m_Mode: 1
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1793261813183886564}
   - component: {fileID: 5258570212712050373}
   m_Layer: 5
-  m_Name: Red
+  m_Name: RedButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5686998956008047564}
         m_TargetAssemblyTypeName: GateOpen, Assembly-CSharp
         m_MethodName: RedOpen
         m_Mode: 1
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 8559885168851133368}
   - component: {fileID: 2350983492140035919}
   m_Layer: 5
-  m_Name: Blue
+  m_Name: BlueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5686998956008047564}
         m_TargetAssemblyTypeName: GateOpen, Assembly-CSharp
         m_MethodName: BlueOpen
         m_Mode: 1
@@ -773,6 +773,54 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!1 &4582842924739872007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7825732896009534680}
+  - component: {fileID: 5686998956008047564}
+  m_Layer: 0
+  m_Name: BarController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7825732896009534680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582842924739872007}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -690.88214, y: 642.63135, z: 53.356934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4923800993382496743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5686998956008047564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582842924739872007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f108906df10e39d4fb307f287e2ce6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueBars: []
+  redBars: []
+  greenBars: []
+  purpleBars: []
 --- !u!1 &5791440039115844833
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +930,7 @@ GameObject:
   - component: {fileID: 3525251545947372407}
   - component: {fileID: 4948410482317287484}
   m_Layer: 5
-  m_Name: Purple
+  m_Name: PurpleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,7 +1037,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5686998956008047564}
         m_TargetAssemblyTypeName: GateOpen, Assembly-CSharp
         m_MethodName: PurpleOpen
         m_Mode: 1
@@ -1206,6 +1254,7 @@ Transform:
   - {fileID: 9192989411892870073}
   - {fileID: 8228758798328171580}
   - {fileID: 1549803974973380237}
+  - {fileID: 7825732896009534680}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7515428388972448224
