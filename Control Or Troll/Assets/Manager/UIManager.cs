@@ -6,7 +6,6 @@ public class UIManager : Singleton<UIManager>
 
     protected UIManager() { }
 
-
     [Header("Color Buttons")]
     [SerializeField] public Button redButton;
     [SerializeField] public Button blueButton;
