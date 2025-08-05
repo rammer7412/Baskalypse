@@ -14,15 +14,17 @@ public class Ball : Singleton<Ball>
 
     [SerializeField] Sprite NormalBall;
     [SerializeField] Sprite IronBall;
-    [SerializeField] Sprite GravityBall;
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D ballRb;
     private BallType ballType;
+    private ParticleSystem ballParticle;
+    private bool isNowGravityEffect = false;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ballParticle = GetComponent<ParticleSystem>();
         ballRb = GetComponent<Rigidbody2D>();
         ballType = BallType.Normal;
     }
@@ -44,7 +46,9 @@ public class Ball : Singleton<Ball>
         }
         else if (type == "Gravity")
         {
-            spriteRenderer.sprite = GravityBall;
+            if (isNowGravityEffect) ballParticle.Stop(); 
+            else ballParticle.Play();
+
             ballRb.gravityScale = -1;
             ballType = BallType.Gravity;
         }
