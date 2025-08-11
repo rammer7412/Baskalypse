@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FailPanelTrigger : MonoBehaviour
+public class PanelTrigger : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void RestartButtonOn()
@@ -9,6 +9,10 @@ public class FailPanelTrigger : MonoBehaviour
     }
 
     public void HomeButtonOn()
+    {
+
+    }
+    public void NextButtonOn()
     {
         
     }
