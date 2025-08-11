@@ -14,5 +14,11 @@ public class BallTrigger : MonoBehaviour
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
         }
+        if (other.CompareTag("DeathZone"))
+        {
+            Debug.Log("공이 DeathZone에 닿음!");
+            failPanel.SetActive(true);
+            buttonGroup.SetActive(false);
+        }
     }
 }
