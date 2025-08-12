@@ -14,5 +14,10 @@ public class BallTrigger : MonoBehaviour
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
         }
+        else if (other.CompareTag("Arrow"))
+        {
+            failPanel.SetActive(true);
+            buttonGroup.SetActive(false);
+        }
     }
 }
