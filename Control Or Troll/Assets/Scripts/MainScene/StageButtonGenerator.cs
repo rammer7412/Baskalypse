@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class StageButtonGenerator : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class StageButtonGenerator : MonoBehaviour
 
     void Start()
     {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        string[] parts = currentSceneName.Split('_');
+
         for (int i = 1; i <= stageCount; i++)
         {
             GameObject newButton = Instantiate(stageButtonPrefab, buttonGridParent);
@@ -24,10 +29,16 @@ public class StageButtonGenerator : MonoBehaviour
             StageLoader loader = newButton.GetComponent<StageLoader>();
             if (loader != null)
             {
-                loader.stageName = $"Stage{i}";
+                if (currentSceneName.StartsWith("Stage_") && parts.Length == 2)
+                {
+                    loader.stageName = $"Stage_{parts[1]}_{i}";
+                }
+                else if (currentSceneName == "PickChapterScene")
+                {
+                    loader.stageName = $"Stage_{i}";
+                }
                 Debug.Log($"버튼 {i}에 할당된 stageName: {loader.stageName}");
 
-                // Stage Button
                 Button btn = newButton.GetComponent<Button>();
                 if (btn != null)
                     btn.onClick.AddListener(loader.LoadStage);
