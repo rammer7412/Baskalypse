@@ -16,6 +16,13 @@ public class BallTrigger : MonoBehaviour
         }
         else if (other.CompareTag("Arrow"))
         {
+            Debug.Log("화살에 닿음~");
+            failPanel.SetActive(true);
+            buttonGroup.SetActive(false);
+        }
+        else if (other.CompareTag("DeathZone"))
+        {
+            Debug.Log("데스존에 닿음!");
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
         }

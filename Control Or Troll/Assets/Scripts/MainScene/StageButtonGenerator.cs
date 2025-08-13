@@ -6,7 +6,7 @@ public class StageButtonGenerator : MonoBehaviour
 {
     public GameObject stageButtonPrefab;
     public Transform buttonGridParent;
-    public int stageCount = 17;
+    public int stageCount = 5;
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class StageButtonGenerator : MonoBehaviour
                 loader.stageName = $"Stage{i}";
                 Debug.Log($"버튼 {i}에 할당된 stageName: {loader.stageName}");
 
-                // ✅ 버튼 클릭 이벤트 연결
+                // Stage Button
                 Button btn = newButton.GetComponent<Button>();
                 if (btn != null)
                     btn.onClick.AddListener(loader.LoadStage);

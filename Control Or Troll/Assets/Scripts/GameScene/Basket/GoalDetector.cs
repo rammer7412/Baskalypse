@@ -4,6 +4,7 @@ using System.Collections;
 public class BasketGoal : MonoBehaviour
 {
     private Coroutine successCoroutine;
+    [SerializeField] GameObject successPanel;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Ball"))
@@ -26,5 +27,6 @@ public class BasketGoal : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Debug.Log("공이 2초 동안 바구니 안에 있었음 → 성공!");
+        successPanel.SetActive(true);
     }
 }
