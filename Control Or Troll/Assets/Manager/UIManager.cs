@@ -12,4 +12,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public Button greenButton;
     [SerializeField] public Button purpleButton;
 
+    [Header("UI Elements")]
+    [SerializeField] public GameObject failPanel;
+
 }
