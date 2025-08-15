@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &413604200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7178507787751478710, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+  m_PrefabInstance: {fileID: 1880508962341121913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &989949031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,6 +198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1032044552438850487, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: ballParticle
+      value: 
+      objectReference: {fileID: 413604200}
     - target: {fileID: 4923800993382496743, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.631334
@@ -238,7 +247,8 @@ PrefabInstance:
       value: GamePlayTest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1553994066615662098, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}

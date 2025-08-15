@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum BallType
 {
-    Normal, Iron, Gravity
+    Normal, Iron
 };
 
 public class Ball : Singleton<Ball>
@@ -12,19 +12,18 @@ public class Ball : Singleton<Ball>
 
     protected Ball() { }
 
-    [SerializeField] Sprite NormalBall;
-    [SerializeField] Sprite IronBall;
-
+    [SerializeField] private Sprite NormalBall;
+    [SerializeField] private Sprite IronBall;
+    [SerializeField] private GameObject ballParticle;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D ballRb;
     private BallType ballType;
-    private ParticleSystem ballParticle;
+    
     private bool isNowGravityEffect = false;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        ballParticle = GetComponent<ParticleSystem>();
         ballRb = GetComponent<Rigidbody2D>();
         ballType = BallType.Normal;
     }
@@ -46,11 +45,11 @@ public class Ball : Singleton<Ball>
         }
         else if (type == "Gravity")
         {
-            if (isNowGravityEffect) ballParticle.Stop(); 
-            else ballParticle.Play();
+            if (isNowGravityEffect) ballParticle.SetActive(false); 
+            else ballParticle.SetActive(true);
 
-            ballRb.gravityScale = -1;
-            ballType = BallType.Gravity;
+            ballRb.gravityScale = -1 * ballRb.gravityScale;
+            isNowGravityEffect = !isNowGravityEffect;
         }
     }
 
