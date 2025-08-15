@@ -870,6 +870,8 @@ MonoBehaviour:
   blueButton: {fileID: 2350983492140035919}
   greenButton: {fileID: 223144301841731798}
   purpleButton: {fileID: 4948410482317287484}
+  failPanel: {fileID: 8825283043055396246}
+  successPanel: {fileID: 5435739132158921573}
 --- !u!1 &6514103076488564537
 GameObject:
   m_ObjectHideFlags: 0
@@ -6697,6 +6699,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5d2879a92b8230439c05eee92370142, type: 3}
+--- !u!1 &5435739132158921573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7315625925788369972, guid: a5d2879a92b8230439c05eee92370142, type: 3}
+  m_PrefabInstance: {fileID: 3380458351854145361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7530021706152511971 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5073813149933061810, guid: a5d2879a92b8230439c05eee92370142, type: 3}

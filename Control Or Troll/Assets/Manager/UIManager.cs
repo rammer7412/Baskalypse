@@ -14,5 +14,6 @@ public class UIManager : Singleton<UIManager>
 
     [Header("UI Elements")]
     [SerializeField] public GameObject failPanel;
+    [SerializeField] public GameObject successPanel;
 
 }
