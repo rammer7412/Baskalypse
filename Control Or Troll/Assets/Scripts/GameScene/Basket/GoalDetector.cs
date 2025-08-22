@@ -4,7 +4,12 @@ using System.Collections;
 public class BasketGoal : MonoBehaviour
 {
     private Coroutine successCoroutine;
-    [SerializeField] GameObject successPanel;
+    private GameObject successPanel;
+
+    void Awake()
+    {
+        successPanel = UIManager.Instance.successPanel;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Ball"))
