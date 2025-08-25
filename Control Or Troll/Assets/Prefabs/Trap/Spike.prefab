@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 8270409765344309306}
   - component: {fileID: 7361209106711158467}
   m_Layer: 0
-  m_Name: "ChatGPT Image 2025\uB144 7\uC6D4 4\uC77C \uC624\uC804 01_23_51_0"
+  m_Name: SpikeImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
