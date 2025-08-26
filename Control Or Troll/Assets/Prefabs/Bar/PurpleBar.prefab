@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2462880549933621200}
   - component: {fileID: 5435303176349099430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: greenpurplegates-Photoroom_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2064318719002039152}
   - component: {fileID: 5087360588626570331}
   - component: {fileID: 7640668928567607306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PurpleBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

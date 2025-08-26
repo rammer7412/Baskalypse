@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6378682414448845917}
   - component: {fileID: 4603787730719464590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gates_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4825066302523440125}
   - component: {fileID: 930161179792121417}
   - component: {fileID: 4862686562824348203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

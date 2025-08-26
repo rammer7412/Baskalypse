@@ -5,7 +5,6 @@ public class Arrow : MonoBehaviour
     [SerializeField] private float aliveTime = 3f;
     private float nowTime = 0f;
 
-
     void Update()
     {
         nowTime += Time.deltaTime;
@@ -22,6 +21,11 @@ public class Arrow : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 
 }

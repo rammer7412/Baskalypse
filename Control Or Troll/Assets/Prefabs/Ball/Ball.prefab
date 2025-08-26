@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7737856458585833448}
   - component: {fileID: 8468987091210242470}
   - component: {fileID: 2194275143097073987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 225564639749987238}
   - component: {fileID: 6839035028723695366}
   - component: {fileID: 4377846227644917030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

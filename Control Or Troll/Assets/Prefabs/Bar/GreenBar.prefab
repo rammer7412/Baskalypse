@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3489477984032020025}
   - component: {fileID: 3803594441127788352}
   - component: {fileID: 3875936450608818356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7606794612692895147}
   - component: {fileID: 104941307217933076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: greenpurplegates-Photoroom_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
