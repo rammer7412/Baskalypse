@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class LeverController : MonoBehaviour
 {
-    [SerializeField] GameObject leverBar;
-    [SerializeField] GameObject RedBlue;
-    [SerializeField] GameObject GreenPurple;
+    [SerializeField] private GameObject leverBar;
+    [SerializeField] private GameObject RedBlue;
+    [SerializeField] private GameObject GreenPurple;
 
-    GameObject RedButton;
-    GameObject BlueButton;
-    GameObject GreenButton;
-    GameObject PurpleButton;
+    [SerializeField] private Transform Left;
+    [SerializeField] private Transform Right;
+
+    private GameObject RedButton;
+    private GameObject BlueButton;
+    private GameObject GreenButton;
+    private GameObject PurpleButton;
 
     bool isMoved = false;
 
@@ -30,32 +33,38 @@ public class LeverController : MonoBehaviour
         {
             if (other.tag == "Ball")
             {
-                leverBar.transform.DORotate(new Vector3(0f, 0f, -60f), 1f);
-                RedBlue.SetActive(false);
-                GreenPurple.SetActive(true);
+                if (Vector2.Distance(other.transform.position, Left.position) < Vector2.Distance(other.transform.position, Right.position))
+                {
+                    leverBar.transform.DORotate(new Vector3(0f, 0f, -60f), 1f);
+                    RedBlue.SetActive(false);
+                    GreenPurple.SetActive(true);
 
-                RedButton.SetActive(false);
-                BlueButton.SetActive(false);
-                GreenButton.SetActive(true);
-                PurpleButton.SetActive(true);
+                    RedButton.SetActive(false);
+                    BlueButton.SetActive(false);
+                    GreenButton.SetActive(true);
+                    PurpleButton.SetActive(true);
 
-                isMoved = !isMoved;
+                    isMoved = !isMoved;
+                }
             }
         }
         else
         {
             if (other.tag == "Ball")
             {
-                leverBar.transform.DORotate(new Vector3(0f, 0f, 100f), 1f);
-                RedBlue.SetActive(true);
-                GreenPurple.SetActive(false);
+                if (Vector2.Distance(other.transform.position, Left.position) > Vector2.Distance(other.transform.position, Right.position))
+                {
+                    leverBar.transform.DORotate(new Vector3(0f, 0f, 60f), 1f);
+                    RedBlue.SetActive(true);
+                    GreenPurple.SetActive(false);
 
-                RedButton.SetActive(true);
-                BlueButton.SetActive(true);
-                GreenButton.SetActive(false);
-                PurpleButton.SetActive(false);
+                    RedButton.SetActive(true);
+                    BlueButton.SetActive(true);
+                    GreenButton.SetActive(false);
+                    PurpleButton.SetActive(false);
 
-                isMoved = !isMoved;
+                    isMoved = !isMoved;
+                }
             }
         }
 
