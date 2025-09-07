@@ -464,4 +464,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348636f73fcd4954e90b7f522492f2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  successPanel: {fileID: 0}
+  totalBallCount: 1
