@@ -5,18 +5,29 @@ using System.Collections.Generic;
 public class BasketGoal : MonoBehaviour
 {
     [Header("직접 입력한 총 공 개수")]
-    public int totalBallCount = 3;
+    public int totalBallCount = 1;
 
     private HashSet<Collider2D> ballsInside = new HashSet<Collider2D>();
+
     private GameObject successPanel;
+    private GameObject failurePanel;
 
     void Awake()
     {
         successPanel = UIManager.Instance.successPanel;
+        failurePanel = UIManager.Instance.failPanel;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Bomb"))
+        {
+            Debug.Log("💣 폭탄이 바구니에 들어왔습니다 → 실패!");
+            failurePanel.SetActive(true);
+            StopAllCoroutines(); 
+            return;
+        }
+
         if (other.CompareTag("Ball") && !ballsInside.Contains(other))
         {
             StartCoroutine(CheckBallStay(other));
