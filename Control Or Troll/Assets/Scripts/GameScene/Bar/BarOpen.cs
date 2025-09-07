@@ -173,8 +173,8 @@ public class GateOpen : MonoBehaviour
 
     IEnumerator DisablePurpleButton()
     {
-        GreenButton.interactable = false;
+        PurpleButton.interactable = false;
         yield return new WaitForSeconds(2f);
-        GreenButton.interactable = true;
+        PurpleButton.interactable = true;
     }
 }
