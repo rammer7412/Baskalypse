@@ -37,8 +37,7 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in blueBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y - g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x - g.openRange, g.openSpeed);
+                bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             blueIsMoved = !blueIsMoved;
             StartCoroutine("DisableBlueButton");
@@ -48,9 +47,7 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in blueBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y + g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x + g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             blueIsMoved = !blueIsMoved;
             StartCoroutine("DisableBlueButton");
@@ -60,15 +57,12 @@ public class GateOpen : MonoBehaviour
 
     public void RedOpen()
     {
-
         if (redIsMoved)
         {
             foreach (var bar in redBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y - g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x - g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             redIsMoved = !redIsMoved;
             StartCoroutine("DisableRedButton");
@@ -78,14 +72,11 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in redBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y + g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x + g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             redIsMoved = !redIsMoved;
             StartCoroutine("DisableRedButton");
         }
-
     }
 
     public void GreenOpen()
@@ -96,9 +87,7 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in greenBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y - g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x - g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             greenIsMoved = !greenIsMoved;
             StartCoroutine("DisableGreenButton");
@@ -108,9 +97,7 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in greenBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y + g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x + g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             greenIsMoved = !greenIsMoved;
             StartCoroutine("DisableGreenButton");
@@ -126,9 +113,7 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in purpleBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y - g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x - g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             purpleIsMoved = !purpleIsMoved;
             StartCoroutine("DisablePurpleButton");
@@ -138,9 +123,7 @@ public class GateOpen : MonoBehaviour
             foreach (var bar in purpleBars)
             {
                 Bar g = bar.GetComponent<Bar>();
-                if (g.isUpdown) bar.transform.DOMoveY(bar.transform.position.y + g.openRange, g.openSpeed);
-                else bar.transform.DOMoveX(bar.transform.position.x + g.openRange, g.openSpeed);
-
+                bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             purpleIsMoved = !purpleIsMoved;
             StartCoroutine("DisablePurpleButton");
@@ -153,28 +136,28 @@ public class GateOpen : MonoBehaviour
     IEnumerator DisableBlueButton()
     {
         BlueButton.interactable = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         BlueButton.interactable = true;
     }
 
     IEnumerator DisableRedButton()
     {
         RedButton.interactable = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         RedButton.interactable = true;
     }
 
     IEnumerator DisableGreenButton()
     {
         GreenButton.interactable = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         GreenButton.interactable = true;
     }
 
     IEnumerator DisablePurpleButton()
     {
         PurpleButton.interactable = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         PurpleButton.interactable = true;
     }
 }
