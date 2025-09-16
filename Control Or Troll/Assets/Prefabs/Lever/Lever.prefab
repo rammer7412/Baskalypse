@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1301121148325705806
 Transform:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6240644678494285913
 Transform:
   m_ObjectHideFlags: 0
@@ -568,8 +568,10 @@ MonoBehaviour:
   leverBar: {fileID: 494753201033330937}
   RedBlue: {fileID: 9173400251511197826}
   GreenPurple: {fileID: 2194096013660923253}
+  handle: {fileID: 494753201033330937}
   Left: {fileID: 3569268761776254803}
   Right: {fileID: 7773592603323751313}
+  isRB: 0
 --- !u!1 &7494217443463285581
 GameObject:
   m_ObjectHideFlags: 0

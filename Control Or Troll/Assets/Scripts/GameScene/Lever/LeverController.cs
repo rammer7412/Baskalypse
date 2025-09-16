@@ -7,6 +7,7 @@ public class LeverController : MonoBehaviour
     [SerializeField] private GameObject leverBar;
     [SerializeField] private GameObject RedBlue;
     [SerializeField] private GameObject GreenPurple;
+    [SerializeField] private GameObject handle;
 
     [SerializeField] private Transform Left;
     [SerializeField] private Transform Right;
@@ -16,7 +17,7 @@ public class LeverController : MonoBehaviour
     private GameObject GreenButton;
     private GameObject PurpleButton;
 
-    bool isMoved = false;
+    public bool isGP = false;
 
     void Awake()
     {
@@ -26,10 +27,26 @@ public class LeverController : MonoBehaviour
         PurpleButton = UIManager.Instance.purpleButton.gameObject;
     }
 
+    void Start()
+    {
+        handle.gameObject.SetActive(true);
+        if (isGP)
+        {
+            handle.transform.rotation = Quaternion.Euler(0f, 0f, -40f);
+            GreenPurple.SetActive(true);    
+        }
+        else
+        {
+            handle.transform.rotation = Quaternion.Euler(0f, 0f, 70f);
+            RedBlue.SetActive(true);
+        }
+
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isMoved)
+        if (!isGP)
         {
             if (other.tag == "Ball")
             {
@@ -44,7 +61,7 @@ public class LeverController : MonoBehaviour
                     GreenButton.SetActive(true);
                     PurpleButton.SetActive(true);
 
-                    isMoved = !isMoved;
+                    isGP = !isGP;
                 }
             }
         }
@@ -63,7 +80,7 @@ public class LeverController : MonoBehaviour
                     GreenButton.SetActive(false);
                     PurpleButton.SetActive(false);
 
-                    isMoved = !isMoved;
+                    isGP = !isGP;
                 }
             }
         }
