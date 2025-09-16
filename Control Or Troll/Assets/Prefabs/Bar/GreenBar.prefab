@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3875936450608818356}
   m_Layer: 8
   m_Name: GreenBar
-  m_TagString: Untagged
+  m_TagString: Bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,8 +168,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -798762713
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7582348381914136662, guid: 298017ea65d58cd46b715490387c6998, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
