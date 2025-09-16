@@ -32,7 +32,7 @@ public class GateOpen : MonoBehaviour
     public void BlueOpen()
     {
 
-        if (blueIsMoved)
+        if (!blueIsMoved)
         {
             foreach (var bar in blueBars)
             {
@@ -57,7 +57,7 @@ public class GateOpen : MonoBehaviour
 
     public void RedOpen()
     {
-        if (redIsMoved)
+        if (!redIsMoved)
         {
             foreach (var bar in redBars)
             {
@@ -82,7 +82,7 @@ public class GateOpen : MonoBehaviour
     public void GreenOpen()
     {
 
-        if (greenIsMoved)
+        if (!greenIsMoved)
         {
             foreach (var bar in greenBars)
             {
@@ -108,7 +108,7 @@ public class GateOpen : MonoBehaviour
     public void PurpleOpen()
     {
 
-        if (purpleIsMoved)
+        if (!purpleIsMoved)
         {
             foreach (var bar in purpleBars)
             {
