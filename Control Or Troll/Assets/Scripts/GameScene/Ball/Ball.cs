@@ -14,11 +14,13 @@ public class Ball : Singleton<Ball>
 
     [SerializeField] private Sprite NormalBall;
     [SerializeField] private Sprite IronBall;
-    [SerializeField] private GameObject ballParticle;
+    [SerializeField] private GameObject gravityParticle;
+    [SerializeField] public GameObject explosionParticle;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D ballRb;
     private BallType ballType;
-    
+    private BallTrigger ballTrigger;
+
     private bool isNowGravityEffect = false;
 
     private void Start()
@@ -26,6 +28,8 @@ public class Ball : Singleton<Ball>
         spriteRenderer = GetComponent<SpriteRenderer>();
         ballRb = GetComponent<Rigidbody2D>();
         ballType = BallType.Normal;
+        ballTrigger = GetComponent<BallTrigger>();
+        ballTrigger.ballDied += Explosion;
     }
 
 
@@ -45,8 +49,8 @@ public class Ball : Singleton<Ball>
         }
         else if (type == "Gravity")
         {
-            if (isNowGravityEffect) ballParticle.SetActive(false); 
-            else ballParticle.SetActive(true);
+            if (isNowGravityEffect) gravityParticle.SetActive(false);
+            else gravityParticle.SetActive(true);
 
             ballRb.gravityScale = -1 * ballRb.gravityScale;
             isNowGravityEffect = !isNowGravityEffect;
@@ -61,6 +65,11 @@ public class Ball : Singleton<Ball>
         }
     }
 
-
+    private void Explosion()
+    {
+        explosionParticle.SetActive(true);
+        GetComponent<Rigidbody2D>().freezeRotation = true;
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+    }
 
 }
