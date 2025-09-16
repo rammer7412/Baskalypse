@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   springForce: 5
   maxHeight: 25
+  isHorizontal: 1
 --- !u!1 &6282708605405187860
 GameObject:
   m_ObjectHideFlags: 0
