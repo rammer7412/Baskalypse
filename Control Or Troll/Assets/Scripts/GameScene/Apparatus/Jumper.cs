@@ -13,11 +13,20 @@ public class Jumper : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ball" && !isJumped)
+        if (collision.CompareTag("Ball") && !isJumped)
         {
             animator.SetTrigger("Jump");
-            collision.GetComponent<Rigidbody2D>().AddForceY(jumpForce, ForceMode2D.Impulse);
-            isJumped = !isJumped;
+            collision.GetComponent<Rigidbody2D>()
+                     .AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isJumped = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ball"))
+        {
+            isJumped = false;
         }
     }
 }
