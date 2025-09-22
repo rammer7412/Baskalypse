@@ -486,11 +486,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1204805972942950167, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.220008
+      value: 7.770008
       objectReference: {fileID: 0}
     - target: {fileID: 1204805972942950167, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.29
+      value: 37.51
       objectReference: {fileID: 0}
     - target: {fileID: 1204805972942950167, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -498,11 +498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2894689166275474189, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.220008
+      value: 7.770008
       objectReference: {fileID: 0}
     - target: {fileID: 2894689166275474189, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.29
+      value: 37.51
       objectReference: {fileID: 0}
     - target: {fileID: 2894689166275474189, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -547,6 +547,14 @@ PrefabInstance:
     - target: {fileID: 4923800993382496743, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629496141159669917, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629496141159669917, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 37.51
       objectReference: {fileID: 0}
     - target: {fileID: 5686998956008047564, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: redBars.Array.size
