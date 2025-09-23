@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &6943150 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8268145395645270299, guid: 057ccc6e4644d7f4cb15f92a71393588, type: 3}
-  m_PrefabInstance: {fileID: 198611403}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6943151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8142791563766792202, guid: 057ccc6e4644d7f4cb15f92a71393588, type: 3}
@@ -491,11 +486,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd7df34ef2458d42a3f312e37ee3788, type: 3}
---- !u!1 &1928160254 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7813865483075882210, guid: 6fd7df34ef2458d42a3f312e37ee3788, type: 3}
-  m_PrefabInstance: {fileID: 1678937588}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1928160255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4825066302523440125, guid: 6fd7df34ef2458d42a3f312e37ee3788, type: 3}
@@ -516,15 +506,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4923800993382496743, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.631334
+      value: -5.9
       objectReference: {fileID: 0}
     - target: {fileID: 4923800993382496743, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7535734
+      value: 28.9
       objectReference: {fileID: 0}
     - target: {fileID: 4923800993382496743, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.023540454
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4923800993382496743, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -554,22 +544,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5686998956008047564, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
-      propertyPath: redBars.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5686998956008047564, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
-      propertyPath: blueBars.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5686998956008047564, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
-      propertyPath: 'redBars.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1928160254}
-    - target: {fileID: 5686998956008047564, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
-      propertyPath: 'blueBars.Array.data[0]'
-      value: 
-      objectReference: {fileID: 6943150}
     - target: {fileID: 7243813766584632480, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_Name
       value: GamePlayTest
