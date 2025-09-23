@@ -44,7 +44,7 @@ public class BasketGoal : MonoBehaviour
 
     IEnumerator CheckBallStay(Collider2D ball)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.25f);
 
         if (IsBallStillInside(ball))
         {
