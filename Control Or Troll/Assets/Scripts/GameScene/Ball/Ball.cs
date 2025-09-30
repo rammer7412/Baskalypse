@@ -14,7 +14,7 @@ public class Ball : Singleton<Ball>
 
     [SerializeField] private Sprite NormalBall;
     [SerializeField] private Sprite IronBall;
-    [SerializeField] private GameObject gravityParticle;
+    [SerializeField] private Sprite GravityBall;
     [SerializeField] public GameObject explosionParticle;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D ballRb;
@@ -49,8 +49,7 @@ public class Ball : Singleton<Ball>
         }
         else if (type == "Gravity")
         {
-            if (isNowGravityEffect) gravityParticle.SetActive(false);
-            else gravityParticle.SetActive(true);
+            spriteRenderer.sprite = GravityBall;
 
             ballRb.gravityScale = -1 * ballRb.gravityScale;
             isNowGravityEffect = !isNowGravityEffect;

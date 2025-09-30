@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3489477984032020025, guid: a96157106ec7460408c50460d9e414df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.77
+      value: 14.54
       objectReference: {fileID: 0}
     - target: {fileID: 3489477984032020025, guid: a96157106ec7460408c50460d9e414df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2
+      value: 5.05
       objectReference: {fileID: 0}
     - target: {fileID: 3489477984032020025, guid: a96157106ec7460408c50460d9e414df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -561,11 +561,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2064318719002039152, guid: fe8dd96975e22b040af7909f02e25288, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.264831
+      value: -9.71
       objectReference: {fileID: 0}
     - target: {fileID: 2064318719002039152, guid: fe8dd96975e22b040af7909f02e25288, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3370361
+      value: 2.58
       objectReference: {fileID: 0}
     - target: {fileID: 2064318719002039152, guid: fe8dd96975e22b040af7909f02e25288, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1020,6 +1020,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1032044552438850487, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: IronBall
+      value: 
+      objectReference: {fileID: 21300000, guid: e3c2827e599721d4a874c47b3cbbc87e, type: 3}
+    - target: {fileID: 1032044552438850487, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: NormalBall
+      value: 
+      objectReference: {fileID: 21300000, guid: 2baf7c48f24ba894cac00763a6e5fe76, type: 3}
+    - target: {fileID: 1032044552438850487, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: GravityBall
+      value: 
+      objectReference: {fileID: 21300000, guid: d347e629ff7db76499ae7af829b23951, type: 3}
     - target: {fileID: 1204805972942950167, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1119,6 +1131,14 @@ PrefabInstance:
     - target: {fileID: 7243813766584632480, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_Name
       value: GamePlayTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406970987414234116, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406970987414234116, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 459826363
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
