@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd69f7fe31b57e240bfe7dfc7827909d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openSpeed: 2
+  openSpeed: 1
   openRange: 5
   isUpdown: 1
 --- !u!212 &340884193018535719
