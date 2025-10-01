@@ -52,15 +52,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BasketBack
-    uniqueID: 2564758133
-    locked: 0
-  - name: Ball
-    uniqueID: 2867594403
-    locked: 0
-  - name: BasketFront
-    uniqueID: 186061297
-    locked: 0
   - name: RoadBack
     uniqueID: 647492421
     locked: 0
@@ -69,6 +60,15 @@ TagManager:
     locked: 0
   - name: RoadFront
     uniqueID: 2374648843
+    locked: 0
+  - name: BasketBack
+    uniqueID: 2564758133
+    locked: 0
+  - name: Ball
+    uniqueID: 2867594403
+    locked: 0
+  - name: BasketFront
+    uniqueID: 186061297
     locked: 0
   - name: Trap
     uniqueID: 2458019745
