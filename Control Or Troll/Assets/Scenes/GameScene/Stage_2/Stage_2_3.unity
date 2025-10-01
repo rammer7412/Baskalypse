@@ -844,6 +844,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5161899403636063859, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: sceneBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 80e05babbd852a3419812d8f6b7e7690, type: 3}
     - target: {fileID: 5686998956008047564, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: redBars.Array.size
       value: 0
@@ -1013,7 +1017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513517908759729527, guid: f89efc9e97a868747bd7fd2822a06f84, type: 3}
       propertyPath: Force
-      value: 15
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 6261163375241257442, guid: f89efc9e97a868747bd7fd2822a06f84, type: 3}
       propertyPath: m_Name
