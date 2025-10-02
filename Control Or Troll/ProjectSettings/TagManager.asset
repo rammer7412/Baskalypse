@@ -73,5 +73,8 @@ TagManager:
   - name: Trap
     uniqueID: 2458019745
     locked: 0
+  - name: UI
+    uniqueID: 2012458527
+    locked: 0
   m_RenderingLayers:
   - Default
