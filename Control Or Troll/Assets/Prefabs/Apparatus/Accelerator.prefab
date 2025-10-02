@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Force: -15
-  image1: {fileID: 2978765476110869083}
-  image2: {fileID: 1151265342716472642}
+  image1: {fileID: 1151265342716472642}
+  image2: {fileID: 2978765476110869083}
 --- !u!61 &3437998694291607690
 BoxCollider2D:
   m_ObjectHideFlags: 0
