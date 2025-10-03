@@ -3,7 +3,6 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class GateOpen : MonoBehaviour
 {
     public GameObject[] blueBars;
@@ -18,10 +17,10 @@ public class GateOpen : MonoBehaviour
 
     void Awake()
     {
-        RedButton = UIManager.Instance.redButton;
-        BlueButton = UIManager.Instance.blueButton;
+        RedButton   = UIManager.Instance.redButton;
+        BlueButton  = UIManager.Instance.blueButton;
         GreenButton = UIManager.Instance.greenButton;
-        PurpleButton = UIManager.Instance.purpleButton;
+        PurpleButton= UIManager.Instance.purpleButton;
     }
 
     bool redIsMoved = false;
@@ -31,28 +30,29 @@ public class GateOpen : MonoBehaviour
 
     public void BlueOpen()
     {
-
         if (!blueIsMoved)
         {
             foreach (var bar in blueBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(true); // ★ 추가: 이미지 On
                 bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             blueIsMoved = !blueIsMoved;
-            StartCoroutine("DisableBlueButton");
         }
         else
         {
             foreach (var bar in blueBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(false); // ★ 추가: 이미지 Off
                 bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             blueIsMoved = !blueIsMoved;
-            StartCoroutine("DisableBlueButton");
         }
-
+        StartCoroutine("DisableBlueButton");
     }
 
     public void RedOpen()
@@ -61,77 +61,80 @@ public class GateOpen : MonoBehaviour
         {
             foreach (var bar in redBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(true); // ★
                 bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             redIsMoved = !redIsMoved;
-            StartCoroutine("DisableRedButton");
         }
         else
         {
             foreach (var bar in redBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(false); // ★
                 bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             redIsMoved = !redIsMoved;
-            StartCoroutine("DisableRedButton");
         }
+        StartCoroutine("DisableRedButton");
     }
 
     public void GreenOpen()
     {
-
         if (!greenIsMoved)
         {
             foreach (var bar in greenBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(true); // ★
                 bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             greenIsMoved = !greenIsMoved;
-            StartCoroutine("DisableGreenButton");
         }
         else
         {
             foreach (var bar in greenBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(false); // ★
                 bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             greenIsMoved = !greenIsMoved;
-            StartCoroutine("DisableGreenButton");
         }
-
+        StartCoroutine("DisableGreenButton");
     }
 
     public void PurpleOpen()
     {
-
         if (!purpleIsMoved)
         {
             foreach (var bar in purpleBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(true); // ★
                 bar.transform.DOMove(g.movedPos, g.openSpeed);
             }
             purpleIsMoved = !purpleIsMoved;
-            StartCoroutine("DisablePurpleButton");
         }
         else
         {
             foreach (var bar in purpleBars)
             {
-                Bar g = bar.GetComponent<Bar>();
+                var g = bar.GetComponent<Bar>();
+                if (g == null) continue;
+                g.SetState(false); // ★
                 bar.transform.DOMove(g.initialPos, g.openSpeed);
             }
             purpleIsMoved = !purpleIsMoved;
-            StartCoroutine("DisablePurpleButton");
         }
-
+        StartCoroutine("DisablePurpleButton");
     }
-
-
 
     IEnumerator DisableBlueButton()
     {
@@ -139,21 +142,18 @@ public class GateOpen : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         BlueButton.interactable = true;
     }
-
     IEnumerator DisableRedButton()
     {
         RedButton.interactable = false;
         yield return new WaitForSeconds(0.1f);
         RedButton.interactable = true;
     }
-
     IEnumerator DisableGreenButton()
     {
         GreenButton.interactable = false;
         yield return new WaitForSeconds(0.1f);
         GreenButton.interactable = true;
     }
-
     IEnumerator DisablePurpleButton()
     {
         PurpleButton.interactable = false;
