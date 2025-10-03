@@ -252,11 +252,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3901955746982198519, guid: 07b7cde018067a64e99acc2c92c7fcd5, type: 3}
       propertyPath: stageCount
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3901955746982198519, guid: 07b7cde018067a64e99acc2c92c7fcd5, type: 3}
       propertyPath: stageSprites.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3901955746982198519, guid: 07b7cde018067a64e99acc2c92c7fcd5, type: 3}
       propertyPath: 'stageSprites.Array.data[0]'
