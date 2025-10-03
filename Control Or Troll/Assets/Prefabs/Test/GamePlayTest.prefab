@@ -2480,6 +2480,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7515428388972448224}
     - target: {fileID: 2194275143097073987, guid: 68adfe5c265b19545a76e84fcb5396e5, type: 3}
+      propertyPath: inGameMenuBtn
+      value: 
+      objectReference: {fileID: 3296112189748239162}
+    - target: {fileID: 2194275143097073987, guid: 68adfe5c265b19545a76e84fcb5396e5, type: 3}
       propertyPath: inGameRetryBtn
       value: 
       objectReference: {fileID: 4413709472010908401}

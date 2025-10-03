@@ -7,6 +7,7 @@ public class BallTrigger : MonoBehaviour
     public GameObject failPanel;
     public GameObject buttonGroup;
     public GameObject inGameRetryBtn;
+    public GameObject inGameMenuBtn;
     public event Action ballDied;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -17,6 +18,7 @@ public class BallTrigger : MonoBehaviour
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
             inGameRetryBtn.SetActive(false);
+            inGameMenuBtn.SetActive(false);
             ballDied?.Invoke();
         }
         else if (other.CompareTag("Arrow")) {
@@ -24,6 +26,7 @@ public class BallTrigger : MonoBehaviour
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
             inGameRetryBtn.SetActive(false);
+            inGameMenuBtn.SetActive(false);
             ballDied?.Invoke();
         }
         else if (other.CompareTag("DeathZone")) {
@@ -31,6 +34,7 @@ public class BallTrigger : MonoBehaviour
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
             inGameRetryBtn.SetActive(false);
+            inGameMenuBtn.SetActive(false);
             ballDied?.Invoke();
         }
     }
