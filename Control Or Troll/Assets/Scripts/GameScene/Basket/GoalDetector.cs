@@ -53,7 +53,7 @@ public class BasketGoal : MonoBehaviour
 
             if (ballsInside.Count >= totalBallCount)
             {
-                Debug.Log("모든 공이 바구니 안에 2초간 머무름 → 성공!");
+                Debug.Log("모든 공이 바구니 안에 1.25초간 머무름 → 성공!");
                 successPanel.SetActive(true);
             }
         }
