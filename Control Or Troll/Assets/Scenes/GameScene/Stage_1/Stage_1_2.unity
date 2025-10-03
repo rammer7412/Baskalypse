@@ -1538,6 +1538,10 @@ PrefabInstance:
       propertyPath: 'blueBars.Array.data[0]'
       value: 
       objectReference: {fileID: 1794982276}
+    - target: {fileID: 7069490637229510843, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7243813766584632480, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_Name
       value: GamePlayTest
