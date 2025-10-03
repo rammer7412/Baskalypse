@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSpeed: 1
-  openRange: 5
+  openRange: 4
   isUpdown: 0
   isOn: 0
   onObject: {fileID: 5374457023551662676}
