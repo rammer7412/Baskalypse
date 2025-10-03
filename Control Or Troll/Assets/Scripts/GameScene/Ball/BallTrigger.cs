@@ -11,8 +11,22 @@ public class BallTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Spikes") || other.CompareTag("Arrow") || other.CompareTag("DeathZone"))
+        if (other.CompareTag("Spikes"))
         {
+            Debug.Log("사망 판정");
+            failPanel.SetActive(true);
+            buttonGroup.SetActive(false);
+            inGameRetryBtn.SetActive(false);
+            ballDied?.Invoke();
+        }
+        else if (other.CompareTag("Arrow")) {
+            Debug.Log("사망 판정");
+            failPanel.SetActive(true);
+            buttonGroup.SetActive(false);
+            inGameRetryBtn.SetActive(false);
+            ballDied?.Invoke();
+        }
+        else if (other.CompareTag("DeathZone")) {
             Debug.Log("사망 판정");
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);

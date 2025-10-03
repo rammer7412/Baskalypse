@@ -894,6 +894,8 @@ MonoBehaviour:
   cinemachineMainVirtualCamera: {fileID: 3896521974712571204}
   cinemachineFreeVirtualCamera: {fileID: 454520406465174973}
   isFreeView: 0
+  failPanel: {fileID: 7069490637229510843}
+  inGameRestartBtn: {fileID: 4413709472010908401}
 --- !u!1 &3896521974712571204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,8 +1017,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 339.4, y: 692.7}
-  m_SizeDelta: {x: 120.9, y: 107.8}
+  m_AnchoredPosition: {x: 347, y: 688}
+  m_SizeDelta: {x: 140, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5005704797286665368
 CanvasRenderer:
@@ -1039,14 +1041,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98490566, g: 0.45156989, b: 0.45156989, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8025129103951341886, guid: 011ed3515f6d8314ab40c6851cb265be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed482028d208c8c44b7401f60e6bf8b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1100,9 +1102,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FailRestartButton, Assembly-CSharp
-        m_MethodName: RestartScene
+      - m_Target: {fileID: 6949616390024994560}
+        m_TargetAssemblyTypeName: PanelTrigger, Assembly-CSharp
+        m_MethodName: RestartButtonOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2217,6 +2219,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7248426529063769253, guid: 227d9bcd5b4fbb447bd45ac78267bab2, type: 3}
   m_PrefabInstance: {fileID: 4094026645374598880}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6949616390024994560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6386412975710101984, guid: 227d9bcd5b4fbb447bd45ac78267bab2, type: 3}
+  m_PrefabInstance: {fileID: 4094026645374598880}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158c31d41eaac124abd461252560a2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7069490637229510843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6542331463512796763, guid: 227d9bcd5b4fbb447bd45ac78267bab2, type: 3}
