@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1933383877794426295, guid: b37dd4e5702348045ba9f9ef5aecd966, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f0a756124fac834c9efd11ac19ffc0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8867924, g: 0.26603764, b: 0.26603764, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -515,6 +515,13 @@ MonoBehaviour:
   stageButtonPrefab: {fileID: 384766055150026665}
   buttonGridParent: {fileID: 1389264905980717438}
   stageCount: 5
+  stageSprites:
+  - {fileID: 21300000, guid: 7f0a756124fac834c9efd11ac19ffc0d, type: 3}
+  - {fileID: 21300000, guid: 8545a2053f4a67c4aad14376b0fa18f6, type: 3}
+  - {fileID: 21300000, guid: 8dd83c5eb3ab19d41a31cca7035f7ddf, type: 3}
+  - {fileID: 21300000, guid: cf9e087ca790c6e42a28228b250bb294, type: 3}
+  - {fileID: 21300000, guid: a72d4ee2e21d5874a91cae0fa66ff94c, type: 3}
+  setNativeSize: 0
 --- !u!1001 &9215697504048119735
 PrefabInstance:
   m_ObjectHideFlags: 0
