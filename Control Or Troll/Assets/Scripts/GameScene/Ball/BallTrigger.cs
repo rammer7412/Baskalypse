@@ -6,32 +6,18 @@ public class BallTrigger : MonoBehaviour
 {
     public GameObject failPanel;
     public GameObject buttonGroup;
+    public GameObject inGameRetryBtn;
     public event Action ballDied;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Spikes"))
+        if (other.CompareTag("Spikes") || other.CompareTag("Arrow") || other.CompareTag("DeathZone"))
         {
-            Debug.Log("공이 가시에 닿음!");
+            Debug.Log("사망 판정");
             failPanel.SetActive(true);
             buttonGroup.SetActive(false);
+            inGameRetryBtn.SetActive(false);
             ballDied?.Invoke();
         }
-        else if (other.CompareTag("Arrow"))
-        {
-            Debug.Log("화살에 닿음~");
-            failPanel.SetActive(true);
-            buttonGroup.SetActive(false);
-            ballDied?.Invoke();
-            
-        }
-        else if (other.CompareTag("DeathZone"))
-        {
-            Debug.Log("데스존에 닿음!");
-            failPanel.SetActive(true);
-            buttonGroup.SetActive(false);
-            ballDied?.Invoke();
-        }
-        
     }
 }

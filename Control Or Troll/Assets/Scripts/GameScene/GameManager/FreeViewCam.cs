@@ -12,6 +12,7 @@ public class FreeViewCam : MonoBehaviour
     private Vector3 dragWorldStart;
 
     public GameObject failPanel;
+    public GameObject inGameRestartBtn;
 
 
     void Start()
@@ -23,6 +24,7 @@ public class FreeViewCam : MonoBehaviour
     {
         if (isFreeView) return;
         failPanel.SetActive(false);
+        inGameRestartBtn.SetActive(true);
         cinemachineMainVirtualCamera.SetActive(false);
         isFreeView = true;
         isDragging = false;
