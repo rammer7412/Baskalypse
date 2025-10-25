@@ -73,4 +73,12 @@ public class PanelTrigger : MonoBehaviour
             SceneManager.LoadScene(currentScene);
         }
     }
+    public void ChapterButtonOn()
+    {
+        string chapterScene = ParseScene("chapter");
+        if (!string.IsNullOrEmpty(chapterScene))
+        {
+            SceneManager.LoadScene("Stage_" + chapterScene);
+        }
+    }
 }
