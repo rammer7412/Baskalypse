@@ -628,10 +628,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10
       objectReference: {fileID: 0}
-    - target: {fileID: 1237179530583320004, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1374803550968296527, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: field of view
       value: 40
@@ -728,10 +724,6 @@ PrefabInstance:
       propertyPath: 'blueBars.Array.data[0]'
       value: 
       objectReference: {fileID: 1516200315}
-    - target: {fileID: 6655076416542488006, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7243813766584632480, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_Name
       value: GamePlayTest
