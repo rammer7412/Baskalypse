@@ -1999,6 +1999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamePlayTest
       objectReference: {fileID: 0}
+    - target: {fileID: 7918280501047902288, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e80ca9b4a03863a4494aeeb0e2bf9f74, type: 3}
     - target: {fileID: 8406970987414234116, guid: b15a57cefa5c46241b80492495dae0d4, type: 3}
       propertyPath: m_Sprite
       value: 

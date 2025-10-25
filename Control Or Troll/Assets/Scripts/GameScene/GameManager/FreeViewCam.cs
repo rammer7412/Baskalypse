@@ -28,6 +28,7 @@ public class FreeViewCam : MonoBehaviour
         cinemachineMainVirtualCamera.SetActive(false);
         isFreeView = true;
         isDragging = false;
+        Ball.Instance.gameObject.SetActive(false);
     }
 
     public void ExitFreeMode()
